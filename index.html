@@ -163,7 +163,7 @@
     <div class="container">
         <header>
             <h1>✨ TuMejorNota ✨</h1>
-            <p class="subtitle">Calidad y excelencia en cada producto</p>
+            <p class="subtitle">Te acompaño en tus trabajos, sin estrés</p>
         </header>
 
         <div class="edit-info">
@@ -172,7 +172,7 @@
             <ol style="margin-left: 20px; margin-top: 10px;">
                 <li>Mira los productos disponibles de tu MejorNota</li>
                 <li>Escribe al Whatsapp</li>               
-                <p style="margin-top: 10px;"><strong>💡 Recomendación:</strong>Deja en el DM, el producto que necesitas y te respondere lo más rapido posible para decirte el precio de este.</p>
+                <p style="margin-top: 10px;"><strong>💡 Recomendación:</strong>En el mensaje menciona el producto que deseas y te responderemos lo antes posible con la información y el precio.</p>
         </div>
 
         <div id="productsContainer" class="products-grid"></div>
@@ -207,23 +207,15 @@
                 image: "https://drive.google.com/thumbnail?id=16LgNRIfJOhqOa_Au5ntwxWWNS5IptE4V&sz=w1000", // Enlace directo de Google Drive
                 emoji: "✍🏽",
                 name: "ASESORIAS PERSONALIZADAS",
-                description: "¿Necesitas apoyo académico? En TuMejorNota te acompañamos con asesorías personalizadas, elaboración de material base y trabajos académicos"
+                description: "Aprende a hacer tus trabajos académicos sin enredos. Te ayudamos a organizar la información, mejorar la redacción y presentar trabajos claros, bien estructurados"
             }
         ];
 
         // Generar las tarjetas de productos
         const container = document.getElementById('productsContainer');
         products.forEach(product => {
-            const card = document.createElement('a');
+            const card = document.createElement('div');
             card.className = 'product-card';
-            card.style.textDecoration = 'none';
-            card.style.color = 'inherit';
-            card.style.cursor = 'pointer';
-            
-            // Mensaje personalizado para WhatsApp según el servicio
-            const message = encodeURIComponent(`¡Hola! Me interesa el servicio de ${product.name}. ¿Podrías darme más información?`);
-            card.href = `https://wa.me/${whatsappNumber}?text=${message}`;
-            card.target = '_blank';
             
             // Determinar si usar imagen o emoji
             const imageContent = product.image 
